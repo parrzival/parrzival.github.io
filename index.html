@@ -1,17 +1,41 @@
+<!DOCTYPE html>
 <html>
-<head>
-   <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-  <title>AAAH</title>
-</head>
-<body>
-  Wazup ma dudessssssssssssssssss
-  <a-scene>
-     <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-     <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-     <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-     <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-     <a-sky src="https://ucarecdn.com/37238d04-9f3e-43c5-beac-579ed4773b53/"></a-sky>
-   </a-scene>
-   Hello
-</body>
+
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://dist.3d.io/3dio-js/1.x.x/3dio.min.js"></script>
+    <script src="/script.js" defer></script>
+  </head>
+
+  <body>
+
+    <!-- ASSETS -->
+
+
+    <!-- SCENE -->
+    <a-scene>
+
+       <a-assets>
+      <a-asset-item id="mtl" src="https://cdn.glitch.com/084b2e5d-3bde-43a0-9c3b-6393e039ae69%2Fmaterials.mtl?1507313496537"></a-asset-item>
+      <a-asset-item id="obj" src="https://cdn.glitch.com/084b2e5d-3bde-43a0-9c3b-6393e039ae69%2Fmodel.obj?1507313517651"></a-asset-item>
+    </a-assets>
+
+    <a-entity obj-model="obj: #obj; mtl: #mtl;" shadow="receive: false;" position="0 2 -5" scale="5 5 5"></a-entity>
+
+  <a-entity environment="shadow: true; shadowSize: 10; preset:default;" ></a-entity>
+
+    </a-scene>
+
+    <!-- TEXTURES -->
+      <a-box src="#box"></a-box>
+
+
+  </body>
+
+
 </html>
